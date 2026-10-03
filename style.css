@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:wght@400;700&display=swap');
+
+/* ====== Estilo general ====== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FAF8F2;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ====== Header y Navbar ====== */
+header {
+  text-align: center;
+  padding: 1.5rem;
+  color: #D4AF37;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #C7D8EA, #FAF8F2);
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #D4AF37 !important;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #AEAD8A !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #D4AF37 !important;
+}
+
+/* ====== Carrusel ====== */
+#carouselExampleCaptions {
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#carouselExampleCaptions img {
+  max-height: 400px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.5s ease;
+  border-radius: 8px;
+}
+
+#carouselExampleCaptions img:hover {
+  transform: scale(1.03);
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #AEAD8A;
+}
+
+.carousel-indicators .active {
+  background-color: #D4AF37;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.carousel-caption {
+  background: rgba(250, 248, 242, 0.8);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.carousel-caption h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #004d61;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ====== Secciones ====== */
+section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+/* ====== Imágenes ====== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ====== Cards ====== */
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #004d61;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ====== Botones ====== */
+button, .btn-primary {
+  background-color: #D4AF37;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .btn-primary:hover {
+  background-color: #AEAD8A;
+  color: #fff;
+}
+
+/* ====== Footer ====== */
+footer {
+  width: 100%;
+  background: linear-gradient(90deg, #C7D8EA, #AEAD8A);
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+footer h2 {
+  font-size: 1.8rem;
+  color: #D4AF37;
+  margin-bottom: 1rem;
+}
+
+footer p:last-child {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* ====== Redes sociales (wrapper) ====== */
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Montserrat", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #C7D8EA;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #FAF8F2;
+  color: #333;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #FAF8F2;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Hover colores redes */
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
